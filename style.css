@@ -1,0 +1,406 @@
+:root {
+    --yellow: #FFDE00;
+    --green: #00853F;
+    --red: #CE1126;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    font-size: 62.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+                                                   /*PAGE1- Acceuil*/
+/*Header*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-right: 1rem;
+}
+.logo {
+    height: 10rem;
+    width: 14rem;
+    margin-left: 2rem;
+    object-fit: cover;
+}
+.nav {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+}
+.nav:hover {
+    text-decoration: underline;
+}
+@media (max-width: 1000px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .nav {
+        font-size: 1.2rem;
+    }
+}
+/* Section 1 - Hero section */
+.hero-section {
+    background-image: url(background-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-logo {
+    height: 30rem;
+}
+.slogant {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    display: inline-block;                        
+    background: linear-gradient(90deg, var(--green), var(--yellow), var(--red));
+    background-clip: text;                         
+    -webkit-background-clip: text;                 
+    color: transparent;                            
+    -webkit-text-fill-color: transparent
+}
+.hero-input {
+    width: 60rem;
+    border-radius: 1rem;
+    height: 5rem;
+    padding-left: 2rem;
+    border: none;
+}
+@media (max-width: 500px) {
+    .hero-logo {
+        height: 25rem;
+    }
+    .slogant {
+        width: 70%;
+        font-size: 1.5rem ;
+    }
+    .hero-input {
+        width: 70%;
+    }
+    .hero-section {
+        height: 60rem;
+    }
+}
+/* section 2 - Apropos section*/
+.A-propos {
+    display: flex;
+    height: 40rem;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #00853F;
+    gap: 2rem;
+}
+.A-propos-image-container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+}
+.A-propos-text-container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.A-propos-image {
+    height: 100%;
+    width: 100%;
+}
+.A-propos-text {
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 1000px) {
+    .A-propos {
+        gap: 2rem;
+    }
+    .A-propos-image-container {
+        height: 80%;
+    }
+    .A-propos-text-container {
+        height: 80%;
+    }
+}
+@media (max-width: 500px) {
+    .A-propos {
+        font-size: 1rem;
+        height: 45rem;
+    }
+    .A-propos-text-container {
+        height: 80%;
+    }
+}
+/* section 3 - Product section*/ 
+.product-section {
+    height:auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.products-container {
+    width: 90%;
+    display: flex;
+    overflow-x: auto;           
+    gap: 2rem;                  
+    padding: 1rem;
+    scroll-behavior: smooth
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s;
+    flex: 0 0 auto; 
+    width: 200px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px gray;
+}
+.images {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.product-desc {
+    width: 60%;
+    height: 4rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.product-button {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    height: 20%;
+    transition: 0.5s;
+}
+.product-button:hover {
+    background-color: var(--red);
+}
+/* footer */ 
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    height: 10rem;
+    border-top: 2px solid lightgray;
+}
+.footer-div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.socials {
+    height: 2rem;
+}
+@media (max-width: 500px) {
+    footer {
+        font-size: 1rem;
+    }
+}
+                                            /*PAGE2*- Produits*/
+/* Product section */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+.grid-img-container {
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+.grid-image {
+    height: 100%;
+    width: 100%;
+}
+.grid-desc {
+    height: 10%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+}
+.gird-price {
+    height: 10%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-button {
+    width: 100%;
+    height: 10%;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.grid-button:hover {
+    background-color: var(--red);
+}
+.grid-item {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+.grid-item:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 5px 5px gray;
+    transition: 0.5s;
+}
+@media (max-width: 1000px) {
+    .grid-desc {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 500px) {
+    .grid-container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/*                                  Page3 - Contact                             */
+/* CONTACT FORM */ 
+.form-section  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 70rem;
+    background-image: url(image/Senegal-background-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form-header {
+    font-size: 3.6rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    color: white;
+}
+form {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+label {
+    display: block;
+    font-size: 1.4rem;
+    color: white;
+}
+.input-field {
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.form-button {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 10rem;
+    margin-top: 2rem;
+}
+.form-button:hover {
+    background-color: var(--red);
+}
+.form-footer {
+    font-size: 2rem;
+    color: white;
+}
+.num {
+    font-size: 1.4rem;
+    color: var(--red);
+}
+@media (max-width: 1000px) {
+    .form-section {
+        height: 80rem;
+    }
+}
+@media (max-width: 500px) {
+    .form-section {
+        height: 65rem;
+    }
+    .input-field {
+        width: 300px;
+    }
+    .form-header {
+        font-size: 3rem;
+    }
+}
