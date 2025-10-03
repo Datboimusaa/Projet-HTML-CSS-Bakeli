@@ -113,11 +113,11 @@ nav {
 }
 .A-propos-image-container {
     height: 100%;
-    width: 40%;
+    width: 25%;
     display: flex;
 }
 .A-propos-text-container {
-    height: 100%;
+    height: 70%;
     width: 30%;
     display: flex;
     justify-content: center;
